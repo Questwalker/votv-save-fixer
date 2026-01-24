@@ -7,6 +7,10 @@ body {
     max-width: 900px;
 }
 
+ul > li {
+    margin-top: 4px;
+}
+
 .spacing_above {
     margin-top: 8px;
 }
