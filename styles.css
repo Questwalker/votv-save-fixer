@@ -1,0 +1,26 @@
+html {
+    font-family: monospace;
+    color-scheme: light dark;
+}
+
+body {
+    max-width: 900px;
+}
+
+.spacing_above {
+    margin-top: 8px;
+}
+
+#logbox {
+    height: 20em;
+    width: 100%;
+    border: solid light-dark(#000, green) 1px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 6px;
+    line-height: 1.3em;
+}
+
+#inputbox {
+    border: 1px solid transparent;
+}

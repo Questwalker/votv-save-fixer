@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="color-scheme" content="dark light"/>
+    <title>VotV Save Fixer</title>
+    <meta property="og:title" content="VotV Save Fixer">
+    <meta name="description" content="A tool that provides a collection of fixes for various common issues with VotV save files">
+    <meta property="og:description" content="A tool that provides a collection of fixes for various common issues with VotV save files">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://questwalker.github.io/votv-save-fixer/">
+    <meta property="og:site_name" content="Questwalker">
+    <script>logcache = []</script>
+    <link rel="stylesheet" href="styles.css" onerror="logcache.push('[WARN] CSS load failed')"/>
+</head>
+<body>
+    <h1>Voices of the Void Save Fixer</h1>
+    <p>This tool provides a collection of fixes for various common issues with VotV save files.</p>
+    <div id="inputbox"><input type="file" name="file" id="fileinput"></div>
+    <div id="fixerbuttons" class="spacing_above">
+        <div>
+            <input type="checkbox" id="removestickersfix" name="removestickersfix">
+            <label for="removestickersfix">Remove stickers from computer screen</label>
+        </div>
+        <div>
+            <input type="checkbox" id="removetrashbitspiles" name="removetrashbitspiles">
+            <label for="removetrashbitspiles">Delete trash item piles</label>
+        </div>
+    </div>
+    <button class="spacing_above" name="file" id="downloadbutton" disabled>Fix and download</button>
+    <div class="spacing_above" id="logbox">Log start</div>
+    <script src="scripts.js"></script>
+</body>
+</html>
