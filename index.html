@@ -27,14 +27,70 @@
     <div id="fixerbuttons" class="spacing_above">
         <div>
             <input type="checkbox" id="removestickersfix" name="removestickersfix">
-            <label for="removestickersfix">Remove stickers from computer screen</label>
+            <label for="removestickersfix">Remove stickers near computer screen</label>
         </div>
         <div>
             <input type="checkbox" id="removetrashbitspiles" name="removetrashbitspiles">
-            <label for="removetrashbitspiles">Delete trash item piles</label>
+            <label for="removetrashbitspiles">Delete all trash item piles</label>
         </div>
+        <details class="spacing_above">
+            <summary style="margin-left: 8px;">Remove garbage blobs (dropdown):</summary>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_checkall" main>
+                <label for="removegarbageblobs_checkall">Remove all</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_metal" name="removegarbageblobs" val="0">
+                <label for="removegarbageblobs_metal">Metal</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_paper" name="removegarbageblobs" val="1">
+                <label for="removegarbageblobs_paper">Paper</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_plastic" name="removegarbageblobs" val="2">
+                <label for="removegarbageblobs_plastic">Plastic</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_wood" name="removegarbageblobs" val="3">
+                <label for="removegarbageblobs_wood">Wood</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_electronic" name="removegarbageblobs" val="4">
+                <label for="removegarbageblobs_electronic">Electronic</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_blood" name="removegarbageblobs" val="5">
+                <label for="removegarbageblobs_blood">Blood</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_organic" name="removegarbageblobs" val="6">
+                <label for="removegarbageblobs_organic">Organic</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_rubber" name="removegarbageblobs" val="7">
+                <label for="removegarbageblobs_rubber">Rubber</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_glass" name="removegarbageblobs" val="8">
+                <label for="removegarbageblobs_glass">Glass</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_dirt" name="removegarbageblobs" val="9">
+                <label for="removegarbageblobs_dirt">Dirt</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_burnt" name="removegarbageblobs" val="10">
+                <label for="removegarbageblobs_burnt">Burnt</label>
+            </div>
+            <div>
+                <input type="checkbox" id="removegarbageblobs_leaves" name="removegarbageblobs" val="13">
+                <label for="removegarbageblobs_leaves">Leaves</label>
+            </div>
+        </details>
     </div>
-    <button class="spacing_above" name="file" id="downloadbutton" disabled>Fix and download</button>
+    <hr class="spacing_above">
+    <button name="file" id="downloadbutton" disabled>Fix and download</button>
     <div class="spacing_above" id="logbox">Log start</div>
     <script src="scripts.js"></script>
 </body>

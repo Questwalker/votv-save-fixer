@@ -66,14 +66,16 @@ function applyFixes() {
         file.arrayBuffer().then(buff => {
             // Apply fixes
             let fixesToApply = []
+            let garbagesToRemove = []
             fixerbuttons.querySelectorAll('input:checked').forEach(element => {
-                fixesToApply.push(element.name)
+                if (element.name && !fixesToApply.includes(element.name)) fixesToApply.push(element.name)
+                if (element.name == "removegarbageblobs") garbagesToRemove.push(`[ ${element.getAttribute("val")} ]`)
             })
             if (!fixesToApply.length) {
                 log_print('No fixes are selected')
                 return
             }
-            let newdata = mod.apply_fixes(new Uint8Array(buff), fixesToApply)
+            let newdata = mod.apply_fixes(new Uint8Array(buff), fixesToApply, garbagesToRemove)
 
             // Download file
             let blob = new Blob([newdata], {type: "application/octet-stream"})
@@ -100,3 +102,21 @@ function applyFixes() {
     }
 }
 downloadbutton.addEventListener('click', applyFixes)
+
+// Extra checkbox logic
+removegarbageblobs_checkall.addEventListener('input', () => {
+    // Check all when the main checkbox is checked
+    fixerbuttons.querySelectorAll('input[val]').forEach((element) => {
+        element.checked = removegarbageblobs_checkall.checked
+    })
+})
+fixerbuttons.querySelectorAll('input[val]').forEach((element) => {
+    element.addEventListener('input', () => {
+        // Check the main checkbox if everything has been checked
+        if (fixerbuttons.querySelectorAll('input:checked[val]').length == fixerbuttons.querySelectorAll('input[val]').length) {
+            removegarbageblobs_checkall.checked = true
+        } else {
+            removegarbageblobs_checkall.checked = false
+        }
+    })
+})
